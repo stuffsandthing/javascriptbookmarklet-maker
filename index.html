@@ -14,7 +14,7 @@
       
       async function generate() {
           let e = document.getElementById("input")
-          let resp = await puter.ai.chat([{role: "system", content: msg}, {role: user, content: e.value}])
+          let resp = await puter.ai.chat([{role: "system", content: msg}, {role: "user", content: e.value}])
           console.log(resp.message.content)
       }
     </script>
