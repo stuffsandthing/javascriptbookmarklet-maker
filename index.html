@@ -5,7 +5,12 @@
     <button onclick="generate()">generate</button>
     <script src="https://js.puter.com/v2/"></script>
     <script>
-      puter.ai.chat("Rules because you are inside a web app right now. #1: This is an app about making javascript bookmarklets with AI, so always generate ONLY the bookmarklet #2: DONT even use correct grammar. Instead of this: '{javascript bookmarklet here}. Would you like me to make anything else?', Do this: '{javascript bookmarklet here}'")
+      async function initialize() {
+        await puter.ai.chat("Rules because you are inside a web app right now. #1: This is an app about making javascript bookmarklets with AI, so always generate ONLY the bookmarklet #2: DONT even use correct grammar. Instead of this: '{javascript bookmarklet here}. Would you like me to make anything else?', Do this: '{javascript bookmarklet here}'")
+      }
+
+      initialize()
+      
       async function generate() {
           let e = document.getElementById("input")
           let resp = await puter.ai.chat(e.value)
