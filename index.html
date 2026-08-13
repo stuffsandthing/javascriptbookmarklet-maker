@@ -4,17 +4,19 @@
     <input placeholder='idea goes here...' id='input'></input>
     <button onclick="generate()">generate</button>
     <br></br>
-    <p id="thing"></p>
+    <a id="thing"></a>
     <script src="https://js.puter.com/v2/"></script>
     <script>
       const msg = "Rules because you are inside a web app right now. #1: This is an app about making javascript bookmarklets with AI, so always generate ONLY the bookmarklet #2: DONT even use correct grammar. Instead of this: {javascript bookmarklet here}. Would you like me to make anything else?, Do this: {javascript bookmarklet here"
       const e = document.getElementById("input")
-      const para = document.getElementById("thing")
+      const anch = document.getElementById("thing")
       
       async function generate() {
+          anch.innerText = ""
           let resp = await puter.ai.chat([{role: "system", content: msg}, {role: "user", content: e.value}])
           console.log(resp.message.content)
-          para.innerText = resp.message.content
+          anch.innerText = "Finished! Drag this link to your bookmarks bar. (or test it now by clicking on this)"
+          anch.setAttribute('href',resp.message.content)
       }
     </script>
   </body>
