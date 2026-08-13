@@ -5,10 +5,7 @@
     <button onclick="generate()">generate</button>
     <script src="https://js.puter.com/v2/"></script>
     <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        puter.ai.chat("Rules because you are inside a web app right now. #1: This is an app about making javascript bookmarklets with AI, so always generate ONLY the bookmarklet #2: DONT even use correct grammar. Instead of this: '{javascript bookmarklet here}. Would you like me to make anything else?', Do this: '{javascript bookmarklet here}'")
-        
-      })
+      puter.ai.chat("Rules because you are inside a web app right now. #1: This is an app about making javascript bookmarklets with AI, so always generate ONLY the bookmarklet #2: DONT even use correct grammar. Instead of this: '{javascript bookmarklet here}. Would you like me to make anything else?', Do this: '{javascript bookmarklet here}'")
       function generate() {
           let e = document.getElementById("input")
           let resp = puter.ai.chat(e.value)
