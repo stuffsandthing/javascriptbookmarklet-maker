@@ -1,0 +1,13 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "JSGenerator",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "JSGen",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "id": "jsgen",
+  "description": "JSGenerator: generates bookmarklets with AI"
+}
